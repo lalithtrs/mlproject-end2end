@@ -1,4 +1,6 @@
-Setup the Github Repository
+1. Setup the Github Repository
     a. new environment
     b. setup.py
     c. requirements.txt
+
+2. Create src folder and build the file
