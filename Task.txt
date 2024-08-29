@@ -1,0 +1,4 @@
+Setup the Github Repository
+    a. new environment
+    b. setup.py
+    c. requirements.txt
