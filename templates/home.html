@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Indicator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS for additional styling -->
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FWI Prediction</h1>
+        <form action="{{url_for('predict_data')}}" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="gender" placeholder="gender" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="race_ethnicity" placeholder="Race" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="parental_level_of_education" placeholder="parental level of education" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="lunch" placeholder="lunch" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="test_preparation_course" placeholder="test preparation course" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="math_score" placeholder="math score" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="reading_score" placeholder="reading score" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="writing_score" placeholder="writing score" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <h2>Total Score Prediction is {{results}}</h2>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
